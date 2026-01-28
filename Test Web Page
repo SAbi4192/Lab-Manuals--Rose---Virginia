@@ -1,1 +1,14 @@
 http://testphp.vulnweb.com/login.php
+
+Exp = 3:
+Test POST (Create)
+PowerShell
+Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:5000/items" -ContentType "application/json" -Body '{"id": 4, "name": "Item 4", "description": "I just added this!"}'
+________________________________________
+Test PUT (Update)
+PowerShell
+Invoke-RestMethod -Method Put -Uri "http://127.0.0.1:5000/items/0" -ContentType "application/json" -Body '{"id": 1, "name": "UPDATED NAME", "description": "This text was changed via PUT"}'
+________________________________________
+Test DELETE (Delete)
+PowerShell
+Invoke-RestMethod -Method Delete -Uri "http://127.0.0.1:5000/items/0"
