@@ -21,6 +21,8 @@ Invoke-RestMethod -Method Delete -Uri "http://127.0.0.1:5000/items/0"
         ---------- --------- ---------
 sudo apt update && sudo apt install git python3-pip
 
+cd Desktop
+mkdir SEToolkit
 cd SEToolkit
 
 git clone https://github.com/trustedsec/social-engineer-toolkit setoolkit/
