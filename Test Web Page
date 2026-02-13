@@ -18,3 +18,5 @@ Invoke-RestMethod -Method Delete -Uri "http://127.0.0.1:5000/items/0"
     searchFor=<script>alert(1)</script>&goButton=go
 ----------------------------------------------------------------
 5. <form action="capture.php" method="POST">
+
+sudo apt update && sudo apt install git python3-pip
