@@ -12,3 +12,6 @@ ________________________________________
 Test DELETE (Delete)
 PowerShell
 Invoke-RestMethod -Method Delete -Uri "http://127.0.0.1:5000/items/0"
+
+---------------------------------------------------------------
+4. uname=' OR 1=1 -- &pass=abc&pass=test
