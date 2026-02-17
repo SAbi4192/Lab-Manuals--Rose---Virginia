@@ -32,3 +32,9 @@ cd setoolkit
 pip3 install -r requirements.txt
 
 Command:---- sudo python3 setup.py
+
+---------------- --------------------- -----------------
+1. exam cheating 
+2. attendence input 
+3. attencence counter(number) 
+4. Smart Classroom
