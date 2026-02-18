@@ -1,0 +1,108 @@
+==============================
+EXPERIMENT 2
+INSTALL C COMPILER AND RUN PROGRAM
+==============================
+
+sudo apt update
+sudo apt install build-essential
+gcc --version
+
+nano hi.c
+
+#include <stdio.h>
+int main()
+{
+    printf("Hello World\n");
+    return 0;
+}
+
+gcc -o hi hi.c
+./hi
+
+
+==============================
+EXPERIMENT 3
+GOOGLE APP ENGINE – PYTHON
+==============================
+
+sudo apt install python3
+python3 --version
+sudo apt install curl
+
+curl https://sdk.cloud.google.com | bash
+exec -l $SHELL
+gcloud version
+
+gcloud auth login
+gcloud projects create sabishek-gaetest-2204
+gcloud config set project sabishek-gaetest-2204
+gcloud config list
+
+mkdir exp3_hello
+cd exp3_hello
+nano main.py
+
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    return "Hello World - Experiment 3 Completed!"
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080)
+
+pip install flask
+python3 main.py
+
+Open in browser:
+http://localhost:8080
+
+
+==============================
+EXPERIMENT 4
+GAE LAUNCHER – NODEJS
+==============================
+
+sudo snap install google-cloud-cli --classic
+gcloud --version
+
+sudo apt install curl -y
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt install -y nodejs
+
+node -v
+npm -v
+
+gcloud init
+
+mkdir exp4_app
+cd exp4_app
+npm init -y
+npm install express
+
+nano server.js
+
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello from Experiment 4 - GAE Launcher!');
+});
+
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
+Edit package.json:
+
+"scripts": {
+  "start": "node server.js"
+}
+
+npm start
+
+Open in browser:
+http://localhost:8080
