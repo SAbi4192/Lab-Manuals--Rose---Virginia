@@ -1,0 +1,28 @@
+#include <reg51.h>
+
+void main(void)
+{
+    unsigned char x, y, z, a, b, c;  
+
+    x = 0x12;   
+    y = 0x34;  
+
+    P0 = 0x00;  
+    P1 = 0x00;
+    P2 = 0x00;  
+    P3 = 0x00;  
+
+    z = x + y; 
+    P0 = z;     
+
+    a = y - x; 
+    P1 = a;    
+
+    b = x * y;  
+    P2 = b;     
+
+    c = y / x; 
+    P3 = c;   
+
+    while(1);  
+}
