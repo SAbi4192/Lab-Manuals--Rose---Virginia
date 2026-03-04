@@ -1,7 +1,7 @@
 Prompt for Generating the IEEE Paper:
 Role: You are an expert academic research assistant and computer vision scientist helping to write a high-quality IEEE international conference paper.
 Format: Write the paper in the standard IEEE conference format (two-column style conceptually), maintaining a strict, objective, and rigorous academic tone. Include the following structure: Title, Authors and Affiliations, Keywords, Abstract, 1. Introduction, 2. Related Work, 3. Proposed Unified Framework, 4. Network Architecture, 5. Behavioral Risk Index Model, 6. Prototype Implementation & Edge Deployment, 7. Experimental Setup, 8. Results and Discussion, 9. Ablation Study, 10. Ethical Considerations, 11. Conclusion, and References.
-Topic: “A Unified Multi-Task Deep Learning Framework for Behavior Computing in Smart Public Safety and Defense Monitoring Systems”
+Topic: “Multi-Task Deep Learning for Behavior Computing: A Unified Framework for Smart Public Safety Monitoring”
 Core Concept: The paper must present a computer vision and AI system for smart surveillance and high-risk defense scenarios (e.g., urban conflict zones, counter-terrorism) that integrates three tasks into one unified multi-task deep learning architecture.
 Human Activity Recognition (HAR): Detect abnormal activities (fighting, running, sudden crowd scattering in adversarial settings).
 Face Mask/Compliance Detection: Monitor public health and security compliance in crowded environments.
