@@ -1,4 +1,37 @@
 http://testphp.vulnweb.com/login.php
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXx
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+items = [
+    {"id": 1, "name": "Item 1", "description": "First item"},
+    {"id": 2, "name": "Item 2", "description": "Second item"}
+]
+
+@app.route('/items', methods=['GET'])
+def get_items():
+    return jsonify(items)
+
+@app.route('/items', methods=['POST'])
+def add_item():
+    item = request.get_json()
+    items.append(item)
+    return jsonify(item), 201
+
+@app.route('/items/<int:index>', methods=['PUT'])
+def update_item(index):
+    items[index] = request.get_json()
+    return jsonify(items[index])
+
+@app.route('/items/<int:index>', methods=['DELETE'])
+def delete_item(index):
+    deleted = items.pop(index)
+    return jsonify(deleted)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 Exp = 3:
 Test POST (Create)
